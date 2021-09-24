@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_meetchat">
+
+    <fragment
+        android:id="@+id/navigation_meetchat"
+        android:name="com.app.zoomclone.ui.meetChat.MeetChatFragment"
+        android:label="@string/title_meet_chat"
+        tools:layout="@layout/fragment_meetchat" />
+
+    <fragment
+        android:id="@+id/navigation_meetings"
+        android:name="com.app.zoomclone.ui.meetings.MeetingsFragment"
+        android:label="@string/title_meetings"
+        tools:layout="@layout/fragment_meetings" />
+
+    <fragment
+        android:id="@+id/navigation_contacts"
+        android:name="com.app.zoomclone.ui.contacts.ContactsFragment"
+        android:label="@string/title_contacts"
+        tools:layout="@layout/fragment_contacts" />
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.app.zoomclone.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_root"
+    tools:context=".ui.meetChat.MeetChatFragment" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="12dp"
+            android:background="@drawable/rounded_grey"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/_2sdp">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_search_24"
+                android:layout_marginStart="@dimen/_4sdp"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="@string/search"
+                android:id="@+id/editTextSearch"
+                android:fontFamily="@font/montserratmedium"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:textColorHint="#93929A"
+                android:textSize="@dimen/_13sdp"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/llNewMeeting"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_orange_icon"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:src="@drawable/ic_new_meeting"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/new_meeting"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/montserratsemibold"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/llJoin"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_blue_icon"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:src="@drawable/ic_join"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/join"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/montserratsemibold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="#F0EFF4"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                style="@style/ListItemIconStyle"
+                android:id="@+id/container_avatar"
+                android:layout_marginStart="@dimen/padding_start"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:background="@drawable/contact_bg"
+              >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_15sdp"
+                    android:padding="@dimen/_8sdp"
+                    android:text="AK"
+                    android:id="@+id/textViewShortName"
+                    android:textColor="@android:color/white"/>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewName"
+                android:fontFamily="@font/montserratmedium"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_13sdp"
+                android:text="Sumit"/>
+
+
+        </LinearLayout>
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/layout_root"
+            style="@style/MatchParent"
+            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+            <com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout
+                android:id="@+id/swipy_refresh_layout"
+                style="@style/MatchParent"
+                app:srl_direction="top">
+
+                <ListView
+                    android:id="@+id/list_dialogs_chats"
+                    style="@style/ListViewWithoutDividerStyle" />
+            </com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_chat_empty"
+                style="@style/MatchWidth"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <com.devspark.robototextview.widget.RobotoTextView
+                    style="@style/WrapContent"
+                    android:text="@string/chat_empty_you_are_alone_here"
+                    android:textColor="@color/text_color_dark_grey"
+                    android:textSize="20sp"
+                    app:robotoTypeface="roboto_medium" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/pb_dialogs"
+                style="@style/CenterProgressBarStyle"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

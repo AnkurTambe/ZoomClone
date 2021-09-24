@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_meetchat"
+        android:icon="@drawable/ic_baseline_chat_bubble_24"
+        android:title="@string/title_meet_chat" />
+
+    <item
+        android:id="@+id/navigation_meetings"
+        android:icon="@drawable/ic_baseline_schedule_24"
+        android:title="@string/title_meetings" />
+
+    <item
+        android:id="@+id/navigation_contacts"
+        android:icon="@drawable/ic_baseline_account_box_24"
+        android:title="@string/title_contacts" />
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/title_settings" />
+
+</menu>

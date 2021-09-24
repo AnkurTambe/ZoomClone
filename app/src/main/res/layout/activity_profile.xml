@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimaryDark">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_centerVertical="true"
+            android:id="@+id/imageViewBack"
+            android:layout_marginStart="@dimen/_8sdp"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/_14sdp"
+            android:text="@string/profile"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/_72sdp"
+        android:layout_height="@dimen/_72sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_gravity="center_horizontal">
+
+
+        <TextView
+            android:id="@+id/textViewShortName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_4sdp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_24sdp"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_30sdp">
+
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_video_white"
+                android:id="@+id/imageViewMeet"
+                android:background="@drawable/rounded_blue_icon"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="#0c74e9"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/meet"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_call"
+                android:id="@+id/imageViewPhone"
+                android:background="@drawable/rounded_blue_icon"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="#0c74e9"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/phone"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:padding="@dimen/_8sdp"
+                android:id="@+id/imageViewChat"
+                android:src="@drawable/ic_baseline_chat_bubble_24"
+                android:background="@drawable/rounded_blue_icon"
+                app:tint="@android:color/white" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="#0c74e9"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/chat"/>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="@dimen/_15sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/email"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="coolsam341@gmail.com"
+            android:id="@+id/textViewEmail"
+            android:gravity="end"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@android:color/darker_gray"
+       />
+
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".8">
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/viewPager"/>
+
+
+            <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                android:id="@+id/dots_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:dotsColor="#ddd"
+                android:layout_centerHorizontal="true"
+                app:dotsCornerRadius="8dp"
+                app:dotsSize="16dp"
+                app:dotsSpacing="4dp"
+                android:layout_marginTop="@dimen/_24sdp"
+                app:dotsWidthFactor="2.5"
+                app:selectedDotColor="@android:color/darker_gray"
+                app:progressMode="true"
+                />
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnJoinMeeting"
+                android:layout_margin="@dimen/_12sdp"
+                android:background="@drawable/button_effect"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/montserratsemibold"
+                android:text="@string/join_a_meeting"
+                />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/btnJoinMeeting"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserratsemibold"
+                    android:id="@+id/textViewSignup"
+                    android:textSize="@dimen/_13sdp"
+                    android:text="@string/signup"
+                    android:textColor="@color/colorPrimary"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:id="@+id/textViewSignIn"
+                    android:textSize="@dimen/_13sdp"
+                    android:fontFamily="@font/montserratsemibold"
+                    android:text="@string/signin"
+                    android:textColor="@color/colorPrimary"/>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

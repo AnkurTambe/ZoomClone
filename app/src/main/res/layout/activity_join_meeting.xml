@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimaryDark">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_centerVertical="true"
+            android:id="@+id/imageViewBack"
+            android:layout_marginStart="@dimen/_8sdp"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/_14sdp"
+            android:text="@string/join_meeting"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:inputType="number"
+        android:gravity="center"
+        android:id="@+id/editTextID"
+        android:fontFamily="@font/montserratregular"
+        android:hint="@string/meeting_id"
+        android:background="@android:color/white"
+/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:background="@android:color/darker_gray"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@android:color/white"
+        android:padding="@dimen/_8sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@android:color/black"
+            android:id="@+id/textViewName"
+            android:textSize="@dimen/_15sdp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@android:color/darker_gray"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/button_effect"
+        android:text="@string/join_meeting"
+        android:alpha="0.6"
+        android:enabled="false"
+        android:id="@+id/buttonJoinMeeting"
+        android:textColor="@android:color/white"/>
+</LinearLayout>
